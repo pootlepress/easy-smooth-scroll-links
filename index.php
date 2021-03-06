@@ -1,14 +1,14 @@
 <?php
 /*
-Plugin Name: Easy Smooth Scroll Links
-Description: Adds interesting scroll animation effects to page anchors, smooth scroll and more.
-Version: 2.22
-Requires at least: 3.8
-Tested up to: 5.5
-Author: WebFactory Ltd
-Author URI: https://www.webfactoryltd.com/
-Text Domain: easy-smooth-scroll-links
-License: GPLv2 or later
+ * Plugin Name: Easy Smooth Scroll Links
+ * Description: Adds interesting scroll animation effects to page anchors, smooth scroll and more.
+ * Version: 2.22
+ * Requires at least: 3.8
+ * Tested up to: 5.7.0
+ * Author: PootlePress
+ * Author URI: https://pootlepress.com/
+ * Text Domain: easy-smooth-scroll-links
+ * License: GPLv2 or later
 */
 
 function essl_text_domain() {
