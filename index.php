@@ -284,3 +284,39 @@ if ( ! class_exists( 'ESSLPluginOptions' ) ) :
 		}
 	}
 endif;
+
+if ( ! function_exists( 'essl_fs' ) ) {
+	// Create a helper function for easy SDK access.
+	function essl_fs() {
+		global $essl_fs;
+
+		if ( ! isset( $essl_fs ) ) {
+			// Include Freemius SDK.
+			require_once dirname(__FILE__) . '/wp-sdk/start.php';
+
+			$essl_fs = fs_dynamic_init( array(
+				'id'                  => '7910',
+				'slug'                => 'Easy_Smooth_Scroll_Links',
+				'type'                => 'plugin',
+				'public_key'          => 'pk_70623ba9c7224731c36b70fca4b4d',
+				'is_premium'          => false,
+				'has_addons'          => false,
+				'has_paid_plans'      => false,
+				'menu'                => array(
+					'slug'           => 'essl-plugin-options_options',
+					'support'        => false,
+					'parent'         => array(
+						'slug' => 'options-general.php',
+					),
+				),
+			) );
+		}
+
+		return $essl_fs;
+	}
+
+	// Init Freemius.
+	essl_fs();
+	// Signal that SDK was initiated.
+	do_action( 'essl_fs_loaded' );
+}
