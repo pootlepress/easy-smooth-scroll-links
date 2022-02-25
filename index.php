@@ -2,7 +2,7 @@
 /*
  * Plugin Name: Easy Smooth Scroll Links
  * Description: Adds interesting scroll animation effects to page anchors, smooth scroll and more.
- * Version: 2.22
+ * Version: 2.23.0
  * Requires at least: 3.8
  * Tested up to: 5.7.0
  * Author: PootlePress
@@ -292,20 +292,20 @@ if ( ! function_exists( 'essl_fs' ) ) {
 
 		if ( ! isset( $essl_fs ) ) {
 			// Include Freemius SDK.
-			require_once dirname(__FILE__) . '/wp-sdk/start.php';
+			require_once dirname( __FILE__ ) . '/wp-sdk/start.php';
 
 			$essl_fs = fs_dynamic_init( array(
-				'id'                  => '7910',
-				'slug'                => 'Easy_Smooth_Scroll_Links',
-				'type'                => 'plugin',
-				'public_key'          => 'pk_70623ba9c7224731c36b70fca4b4d',
-				'is_premium'          => false,
-				'has_addons'          => false,
-				'has_paid_plans'      => false,
-				'menu'                => array(
-					'slug'           => 'essl-plugin-options_options',
-					'support'        => false,
-					'parent'         => array(
+				'id'             => '7910',
+				'slug'           => 'Easy_Smooth_Scroll_Links',
+				'type'           => 'plugin',
+				'public_key'     => 'pk_70623ba9c7224731c36b70fca4b4d',
+				'is_premium'     => false,
+				'has_addons'     => false,
+				'has_paid_plans' => false,
+				'menu'           => array(
+					'slug'    => 'essl-plugin-options_options',
+					'support' => false,
+					'parent'  => array(
 						'slug' => 'options-general.php',
 					),
 				),
