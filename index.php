@@ -84,20 +84,32 @@ if ( ! class_exists( 'ESSLPluginOptions' ) ) :
 		 * Return: void
 		 */
 		public static function register() {
-			register_setting( ESSLPluginOptions_ID . '_options', 'enable_essl_aggressive' );
-			register_setting( ESSLPluginOptions_ID . '_options', 'essl_speed' );
-			register_setting( ESSLPluginOptions_ID . '_options', 'essl_offset' );
-			register_setting( ESSLPluginOptions_ID . '_options', 'essl_easing' );
-			register_setting( ESSLPluginOptions_ID . '_options', 'essl_exclude_begin_1' );
-			register_setting( ESSLPluginOptions_ID . '_options', 'essl_exclude_begin_2' );
-			register_setting( ESSLPluginOptions_ID . '_options', 'essl_exclude_begin_3' );
-			register_setting( ESSLPluginOptions_ID . '_options', 'essl_exclude_begin_4' );
-			register_setting( ESSLPluginOptions_ID . '_options', 'essl_exclude_begin_5' );
-			register_setting( ESSLPluginOptions_ID . '_options', 'essl_exclude_match_1' );
-			register_setting( ESSLPluginOptions_ID . '_options', 'essl_exclude_match_2' );
-			register_setting( ESSLPluginOptions_ID . '_options', 'essl_exclude_match_3' );
-			register_setting( ESSLPluginOptions_ID . '_options', 'essl_exclude_match_4' );
-			register_setting( ESSLPluginOptions_ID . '_options', 'essl_exclude_match_5' );
+			$settings = [
+				'enable_essl_aggressive',
+				'essl_speed',
+				'essl_offset',
+				'essl_easing',
+				'essl_exclude_begin_1',
+				'essl_exclude_begin_2',
+				'essl_exclude_begin_3',
+				'essl_exclude_begin_4',
+				'essl_exclude_begin_5',
+				'essl_exclude_match_1',
+				'essl_exclude_match_2',
+				'essl_exclude_match_3',
+				'essl_exclude_match_4',
+				'essl_exclude_match_5',
+			];
+
+			foreach ( $settings as $setting ) {
+				register_setting( ESSLPluginOptions_ID . '_options', $setting, [
+					'sanitize_callback' => [ __CLASS__, 'sanitise_setting' ],
+				] );
+			}
+		}
+
+		public static function sanitise_setting( $value ) {
+			return esc_attr( $value );
 		}
 
 		/** function/method
