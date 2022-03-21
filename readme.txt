@@ -45,7 +45,8 @@ It should work on all major browsers and all modern WP themes. If it doesn’t, 
 
 = 2.23.1 =
 * 2022/03/21
-* Freemius SDK update integration
+* Security - Escaping options output
+* Freemius SDK update
 
 = 2.23.0 =
 * 2021/03/08
