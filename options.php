@@ -25,7 +25,7 @@
 						</p>
 						<p>
 							<input size="10" id="speed" type="text" name="essl_speed"
-										 value="<?php echo get_option( 'essl_speed' ); ?>"/>
+										 value="<?php echo esc_attr( get_option( 'essl_speed' ) ); ?>"/>
 						</p>
 					</label>
 				</td>
@@ -37,7 +37,7 @@
 						</p>
 						<p>
 							<input size="10" id="offset" type="text" name="essl_offset"
-										 value="<?php echo get_option( 'essl_offset' ); ?>"/>
+										 value="<?php echo esc_attr( get_option( 'essl_offset' ) ); ?>"/>
 						</p>
 					</label>
 				</td>
@@ -177,15 +177,15 @@
 						<p><?php _e( 'Exclude Anchors Beginning With ( default is #tab   #quicktab  #pane )	', 'easy-smooth-scroll-links' ); ?>
 						</p>
 						<input id="essl_exclude_begin_1" type="text" name="essl_exclude_begin_1" placeholder="#beginwith1"
-									 value="<?php echo get_option( 'essl_exclude_begin_1' ); ?>"/>
+									 value="<?php echo esc_attr( get_option( 'essl_exclude_begin_1' ) ); ?>"/>
 						<input id="essl_exclude_begin_2" type="text" name="essl_exclude_begin_2" placeholder="#beginwith2"
-									 value="<?php echo get_option( 'essl_exclude_begin_2' ); ?>"/>
+									 value="<?php echo esc_attr( get_option( 'essl_exclude_begin_2' ) ); ?>"/>
 						<input id="essl_exclude_begin_3" type="text" name="essl_exclude_begin_3" placeholder="#beginwith3"
-									 value="<?php echo get_option( 'essl_exclude_begin_3' ); ?>"/>
+									 value="<?php echo esc_attr( get_option( 'essl_exclude_begin_3' ) ); ?>"/>
 						<input id="essl_exclude_begin_4" type="text" name="essl_exclude_begin_4" placeholder="#beginwith4"
-									 value="<?php echo get_option( 'essl_exclude_begin_4' ); ?>"/>
+									 value="<?php echo esc_attr( get_option( 'essl_exclude_begin_4' ) ); ?>"/>
 						<input id="essl_exclude_begin_5" type="text" name="essl_exclude_begin_5" placeholder="#beginwith5"
-									 value="<?php echo get_option( 'essl_exclude_begin_5' ); ?>"/>
+									 value="<?php echo esc_attr( get_option( 'essl_exclude_begin_5' ) ); ?>"/>
 						</p>
 					</label>
 				</td>
@@ -197,15 +197,15 @@
 						</p>
 						<p>
 							<input id="offset" type="text" name="essl_exclude_match_1" placeholder="#exactmatch1"
-										 value="<?php echo get_option( 'essl_exclude_match_1' ); ?>"/>
+										 value="<?php echo esc_attr( get_option( 'essl_exclude_match_1' ) ); ?>"/>
 							<input id="offset" type="text" name="essl_exclude_match_2" placeholder="#exactmatch2"
-										 value="<?php echo get_option( 'essl_exclude_match_2' ); ?>"/>
+										 value="<?php echo esc_attr( get_option( 'essl_exclude_match_2' ) ); ?>"/>
 							<input id="offset" type="text" name="essl_exclude_match_3" placeholder="#exactmatch3"
-										 value="<?php echo get_option( 'essl_exclude_match_3' ); ?>"/>
+										 value="<?php echo esc_attr( get_option( 'essl_exclude_match_3' ) ); ?>"/>
 							<input id="offset" type="text" name="essl_exclude_match_4" placeholder="#exactmatch4"
-										 value="<?php echo get_option( 'essl_exclude_match_4' ); ?>"/>
+										 value="<?php echo esc_attr( get_option( 'essl_exclude_match_4' ) ); ?>"/>
 							<input id="offset" type="text" name="essl_exclude_match_5" placeholder="#exactmatch5"
-										 value="<?php echo get_option( 'essl_exclude_match_5' ); ?>"/>
+										 value="<?php echo esc_attr( get_option( 'essl_exclude_match_5' ) ); ?>"/>
 						</p>
 					</label>
 				</td>

@@ -223,16 +223,16 @@ if ( ! class_exists( 'ESSLPluginOptions' ) ) :
 								}
 
 								var scrollToPosition = $( target ).offset().top - <?php if ( get_option( 'essl_offset' ) != '' ) {
-									echo get_option( 'essl_offset' );
+									echo esc_attr( get_option( 'essl_offset' ) );
 								} else {
 									echo '20';
 								} ?>;
 
 								$( 'html,body' ).animate( {scrollTop: scrollToPosition},<?php if ( get_option( 'essl_speed' ) != '' ) {
-									echo get_option( 'essl_speed' );
+									echo esc_attr( get_option( 'essl_speed' ) );
 								} else {
 									echo '900';
-								} ?> , '<?php echo get_option( 'essl_easing', 'easeInQuint' );?>' );
+								} ?> , '<?php echo esc_attr( get_option( 'essl_easing', 'easeInQuint' ) );?>' );
 
 							}
 
@@ -275,15 +275,15 @@ if ( ! class_exists( 'ESSLPluginOptions' ) ) :
 										if ( target.length ) {
 											$( 'html,body' ).animate( {
 												scrollTop: target.offset().top - <?php if ( get_option( 'essl_offset' ) != '' ) {
-													echo get_option( 'essl_offset' );
+													echo esc_attr( get_option( 'essl_offset' ) );
 												} else {
 													echo '20';
 												} ?>
 											},<?php if ( get_option( 'essl_speed' ) != '' ) {
-												echo get_option( 'essl_speed' );
+												echo esc_attr( get_option( 'essl_speed' ) );
 											} else {
 												echo '900';
-											} ?> , '<?php echo get_option( 'essl_easing', 'easeInQuint' );?>' );
+											} ?> , '<?php echo esc_attr( get_option( 'essl_easing', 'easeInQuint' ) );?>' );
 											return false;
 										}
 									}
