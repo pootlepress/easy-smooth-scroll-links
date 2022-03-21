@@ -2,7 +2,7 @@
 /*
  * Plugin Name: Easy Smooth Scroll Links
  * Description: Adds interesting scroll animation effects to page anchors, smooth scroll and more.
- * Version: 2.23.0
+ * Version: 2.23.1
  * Requires at least: 3.8
  * Tested up to: 5.7.0
  * Author: PootlePress
